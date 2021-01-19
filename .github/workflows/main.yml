@@ -35,7 +35,7 @@ jobs:
           git config --global user.email "${{ secrets.USER_EMAIL }}"
           git config --global user.name "${{ secrets.USER_NAME }}"
           echo "[LOG] Git set-url remote repository"
-          git remote set-url origin https://github.com/amits-metacube/test2.git
+          git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/amits-metacube/test2
           echo "[LOG] Git add ."
           git add .
           echo "[Log] Git Commit"
